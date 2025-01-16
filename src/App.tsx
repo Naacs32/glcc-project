@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TagManager from 'react-gtm-module';
 import { Globe, Mail, Phone, MapPin, Instagram, Clock, Check, GraduationCap, Calendar, FileText, Send, Heart, Target, BookOpen } from 'lucide-react';
-
+import logo from './assets/logo.png'
 function App() {
   const [language, setLanguage] = useState('fr');
   const [formData, setFormData] = useState({
@@ -244,7 +244,7 @@ function App() {
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center">
               <img 
-                src="https://i.imgur.com/YourGLCCLogo.png" 
+                src={logo} 
                 alt="GLCC Logo" 
                 className="h-12 w-auto"
               />
