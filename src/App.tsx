@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import TagManager from 'react-gtm-module';
 import { Globe, Mail, Phone, MapPin, Instagram, Clock, Check, GraduationCap, Calendar, FileText, Send, Heart, Target, BookOpen } from 'lucide-react';
 import logo from './assets/logo.png'
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+
+
 function App() {
   const [language, setLanguage] = useState('fr');
   const [formData, setFormData] = useState({
@@ -238,6 +240,8 @@ function App() {
   };
 
   return (
+    <>
+    <Analytics/>
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
       <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -555,8 +559,8 @@ function App() {
           </div>
         </div>
       </footer>
-      <SpeedInsights/>
     </div>
+    </>
   );
 }
 
